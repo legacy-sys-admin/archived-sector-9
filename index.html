@@ -2,13 +2,92 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Gateway</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gateway // Incident Brief</title>
     <style>
-        body { background: #000; color: #151515; font-family: monospace; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; select: none; }
-        h1 { font-size: 0.8rem; letter-spacing: 4px; font-weight: 300; }
+        body {
+            background-color: #050505;
+            color: #d4d4d4;
+            font-family: 'Courier New', Courier, monospace;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .terminal {
+            background-color: #0a0a0a;
+            border: 1px solid #222;
+            padding: 40px;
+            max-width: 650px;
+            width: 100%;
+            box-shadow: 0 0 20px rgba(0,0,0,0.9);
+        }
+        h1 {
+            color: #d00;
+            font-size: 1.2rem;
+            letter-spacing: 2px;
+            border-bottom: 1px solid #222;
+            padding-bottom: 15px;
+            margin-top: 0;
+            text-transform: uppercase;
+        }
+        p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: #888;
+            margin-bottom: 15px;
+        }
+        .highlight {
+            color: #ccc;
+            font-weight: bold;
+        }
+        .clue-box {
+            margin-top: 30px;
+            padding: 20px;
+            border-left: 3px solid #d00;
+            background-color: #111;
+        }
+        .clue-box p:last-child {
+            margin-bottom: 0;
+        }
+        .cursor {
+            display: inline-block;
+            width: 10px;
+            height: 16px;
+            background-color: #888;
+            vertical-align: text-bottom;
+            animation: blink 1.2s step-end infinite;
+            margin-left: 5px;
+        }
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+        ::selection {
+            background: #333;
+            color: #fff;
+        }
     </style>
 </head>
 <body>
-    <h1>[GATEWAY_OBFUSCATED]</h1>
+    <div class="terminal">
+        <h1>INCIDENT REPORT // COVERT EXFILTRATION</h1>
+        
+        <p>A rogue systems architect attempted to exfiltrate proprietary research by routing it through public infrastructure. They realized they were being tracked, dissolved the primary connection, and locked the payload directory.</p>
+        
+        <p>You have successfully traced the <span class="highlight">Base64 routing table</span> to this node, but the root index has been wiped.</p>
+        
+        <div class="clue-box">
+            <p><span class="highlight">ORACLE INTERCEPT:</span></p>
+            <p>To access the isolated payload, you must append the correct hidden directory path to the end of this URL.</p>
+            <p>The architect named the hidden directory after the <span class="highlight">first internet-distributed computer worm, released in November 1988.</span></p>
+        </div>
+        
+        <br><br>
+        <p>Awaiting path resolution<span class="cursor"></span></p>
+    </div>
 </body>
 </html>
